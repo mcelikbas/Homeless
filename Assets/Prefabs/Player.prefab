@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4186220350626378}
   - component: {fileID: 212877934143155818}
   - component: {fileID: 114957449321949538}
+  - component: {fileID: 114019824420456388}
+  - component: {fileID: 114303169815511424}
   - component: {fileID: 50318746432798412}
   m_Layer: 0
   m_Name: Player
@@ -62,6 +64,30 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &114019824420456388
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334311823678152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2e357ee22063a447ac9781dd73a8a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataBaseItems: []
+--- !u!114 &114303169815511424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334311823678152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134b2bb90ebc82f4ba609e97c72c50a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots: []
 --- !u!114 &114957449321949538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -73,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6243afb82ba7f41ac8d26e8d114b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteTop: {fileID: 21300000, guid: 520040a90560eba4187732aca80a677e, type: 3}
+  spriteRight: {fileID: 21300000, guid: 9a01942c652986b408597cc3cac0bfc1, type: 3}
 --- !u!212 &212877934143155818
 SpriteRenderer:
   m_ObjectHideFlags: 1
