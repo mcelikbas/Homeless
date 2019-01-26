@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class ItemDatabase : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public List<ScItem> dataBaseItems = new List<ScItem>();
+
+    public ScItem getItemById(int id)
+    {
+        ScItem itemToReturn = dataBaseItems[id];
+        Debug.Log("getitemid : " + itemToReturn);
+        return itemToReturn;
+    }
 }

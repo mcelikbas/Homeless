@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScItem : MonoBehaviour {
+[CreateAssetMenu]
+public class ScItem : ScriptableObject {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public string itemName;
+    public Sprite itemIcon;
+
+    public bool isStackable;
+    public int maxStackAmount;
+
+    public bool isCraftable;
+    public List<ScItem> craftItems = new List<ScItem>();
+    public List<int> craftAmount = new List<int>();
 }
