@@ -12,7 +12,7 @@ public class Quickadd : MonoBehaviour {
         
         if (Input.GetButtonDown("Fire1"))
         {
-            inventory.addItem(database.getItemById(0), 1);
+           // inventory.addItem(database.getItemById(0), 1);
         }
 
     }
