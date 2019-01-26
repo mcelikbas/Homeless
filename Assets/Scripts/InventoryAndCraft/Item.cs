@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class ScItem : ScriptableObject {
+public class Item : ScriptableObject {
 
     public string itemName;
     public Sprite itemIcon;
@@ -12,6 +12,6 @@ public class ScItem : ScriptableObject {
     public int maxStackAmount;
 
     public bool isCraftable;
-    public List<ScItem> craftItems = new List<ScItem>();
+    public List<Item> craftItems = new List<Item>();
     public List<int> craftAmount = new List<int>();
 }

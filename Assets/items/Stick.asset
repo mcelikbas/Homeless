@@ -14,7 +14,7 @@ MonoBehaviour:
   itemName: Stick
   itemIcon: {fileID: 21300000, guid: 632cb137e0c6a294bb9ad16d8206852e, type: 3}
   isStackable: 1
-  maxStackAmount: 5
+  maxStackAmount: 1
   isCraftable: 0
   craftItems: []
   craftAmount: 

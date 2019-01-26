@@ -9,7 +9,7 @@ public class Slot : MonoBehaviour {
     Image myImage;
     Text myText;
 
-    public ScItem myItem;
+    public Item myItem;
     public int myAmount;
 
     void Start()
@@ -21,7 +21,7 @@ public class Slot : MonoBehaviour {
 
     
 
-    public void addItem(ScItem itemToAdd, int amount)
+    public void addItem(Item itemToAdd, int amount)
     {
         if (itemToAdd == myItem)
         {

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ItemDatabase : MonoBehaviour {
 
-    public List<ScItem> dataBaseItems = new List<ScItem>();
+    public List<Item> dataBaseItems = new List<Item>();
 
-    public ScItem getItemById(int id)
+    public Item getItemById(int id)
     {
-        ScItem itemToReturn = dataBaseItems[id];
+        Item itemToReturn = dataBaseItems[id];
         Debug.Log("getitemid : " + itemToReturn);
         return itemToReturn;
     }

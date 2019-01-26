@@ -12,7 +12,6 @@ public class Quickadd : MonoBehaviour {
         
         if (Input.GetButtonDown("Fire1"))
         {
-            Debug.Log("je suis la");
             inventory.addItem(database.getItemById(0), 1);
         }
 
