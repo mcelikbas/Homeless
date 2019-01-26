@@ -9,10 +9,12 @@ public class ItemGatherable : MonoBehaviour {
 
     private ListOfItems listOfItems;
 
-	void Start () {
+
+
+    void Start () {
         listOfItems = GameObject.FindGameObjectWithTag("GameManager").GetComponent<ListOfItems>();
-        item = listOfItems.getItem(id);
-	}
+        Item = listOfItems.getItem(id);
+    }
 	
 
 	void Update () {
@@ -21,13 +23,16 @@ public class ItemGatherable : MonoBehaviour {
 
 
 
-    private void OnTriggerEnter2D (Collider2D other)
+    public Item Item
     {
-        if (other.CompareTag("Player"))
+        get
         {
-            Debug.Log(item.ItemName + "      " + item.ItemName);
-            Destroy(this.gameObject);
+            return item;
+        }
+
+        set
+        {
+            item = value;
         }
     }
-
 }

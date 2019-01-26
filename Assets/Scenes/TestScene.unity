@@ -192,6 +192,10 @@ Prefab:
       propertyPath: id
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1916364417290426, guid: 7b1cb2740384ad74ebff858f25a2122b, type: 2}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b1cb2740384ad74ebff858f25a2122b, type: 2}
   m_IsPrefabAsset: 0
@@ -238,6 +242,10 @@ Prefab:
         type: 2}
       propertyPath: id
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738628226124454, guid: bc7103541d86bc74f99500d7f3a361e1, type: 2}
+      propertyPath: m_TagString
+      value: Item
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc7103541d86bc74f99500d7f3a361e1, type: 2}
@@ -286,6 +294,10 @@ Prefab:
       propertyPath: id
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1403068490742086, guid: 4e5b69aaa38f73a439350264f17b4671, type: 2}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e5b69aaa38f73a439350264f17b4671, type: 2}
   m_IsPrefabAsset: 0
@@ -332,6 +344,10 @@ Prefab:
         type: 2}
       propertyPath: id
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250978082087038, guid: b0d562c61f501124290f4d7f106a4ea4, type: 2}
+      propertyPath: m_TagString
+      value: Item
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0d562c61f501124290f4d7f106a4ea4, type: 2}
@@ -451,6 +467,7 @@ GameObject:
   - component: {fileID: 1687553843}
   - component: {fileID: 1687553842}
   - component: {fileID: 1687553841}
+  - component: {fileID: 1687553846}
   - component: {fileID: 1687553844}
   - component: {fileID: 1687553845}
   m_Layer: 0
@@ -575,6 +592,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1687553846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1687553840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4174ad6e59efa734c8356dacaec2356c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1841890368
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,6 +740,15 @@ Prefab:
         type: 2}
       propertyPath: id
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620118802615220, guid: 6ac5db8fdc929454eb050c0601fc1803,
+        type: 2}
+      propertyPath: itemName
+      value: berry
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166291265431060, guid: 6ac5db8fdc929454eb050c0601fc1803, type: 2}
+      propertyPath: m_TagString
+      value: Item
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ac5db8fdc929454eb050c0601fc1803, type: 2}
