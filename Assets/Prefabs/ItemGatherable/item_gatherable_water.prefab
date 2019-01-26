@@ -9,67 +9,56 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1334311823678152}
+  m_RootGameObject: {fileID: 1738628226124454}
   m_IsPrefabAsset: 1
---- !u!1 &1334311823678152
+--- !u!1 &1738628226124454
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4186220350626378}
-  - component: {fileID: 212877934143155818}
-  - component: {fileID: 114957449321949538}
-  - component: {fileID: 114892657555324054}
+  - component: {fileID: 4236377714777576}
+  - component: {fileID: 212268201775364272}
+  - component: {fileID: 114033647557236278}
   m_Layer: 0
-  m_Name: Player
-  m_TagString: Player
+  m_Name: item_gatherable_water
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4186220350626378
+--- !u!4 &4236377714777576
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1334311823678152}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.54, y: 0.164, z: 0}
+  m_GameObject: {fileID: 1738628226124454}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.59, y: 2.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114892657555324054
+--- !u!114 &114033647557236278
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1334311823678152}
+  m_GameObject: {fileID: 1738628226124454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4174ad6e59efa734c8356dacaec2356c, type: 3}
+  m_Script: {fileID: 11500000, guid: d2c82815f974ad54daa69341e3679e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114957449321949538
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1334311823678152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b6243afb82ba7f41ac8d26e8d114b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!212 &212877934143155818
+  id: 0
+--- !u!212 &212268201775364272
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1334311823678152}
+  m_GameObject: {fileID: 1738628226124454}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -99,12 +88,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 520040a90560eba4187732aca80a677e, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 632cb137e0c6a294bb9ad16d8206852e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 0.5, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

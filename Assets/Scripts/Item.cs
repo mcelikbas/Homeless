@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Item {
 
+    private int id;
     private string itemName;
     private string description;
 
-    public Item (string itemName, string description)
+    public Item (int id, string itemName, string description)
     {
+        this.Id = id;
         this.ItemName = itemName;
         this.Description = description;
     }
@@ -36,6 +38,19 @@ public class Item {
         set
         {
             description = value;
+        }
+    }
+
+    public int Id
+    {
+        get
+        {
+            return id;
+        }
+
+        set
+        {
+            id = value;
         }
     }
 }
