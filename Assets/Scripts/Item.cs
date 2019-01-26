@@ -20,6 +20,14 @@ public class Item
         this.MaxStackSize = maxStackSize;
     }
 
+
+
+    public bool isStackFull ()
+    {
+        return Qty == MaxStackSize;
+    }
+
+
     public string ItemName
     {
         get
