@@ -7,7 +7,7 @@ public class InventoryManager : MonoBehaviour
 
     private List<Item> itemsInInventory = new List<Item>();
 
-    const int QTY_TO_ADD = 4;
+    const int QTY_TO_ADD = 3;
 
 
     void Update ()
@@ -34,10 +34,7 @@ public class InventoryManager : MonoBehaviour
             Item item = other.GetComponent<ItemGatherable>().Item;
             addItem(item, QTY_TO_ADD);
 
-
-            Debug.Log("testInventory 2 : " + itemsInInventory.Contains(item));
- 
-            //Debug.Log("Player got : " + item.ItemName + "(Id:" + item.Id + ")");
+            Debug.Log("Player got : " + item.ItemName + "(Id:" + item.Id + ")");
         }
     }
 
@@ -45,102 +42,49 @@ public class InventoryManager : MonoBehaviour
 
     public void addItem (Item itemToAdd, int qty)
     {
-        //int qtyToObtain = qty;
+        List<Item> allItemsOccurences = itemsInInventory.FindAll(item => item.Id == itemToAdd.Id);
+        int nbOfOccurences = allItemsOccurences.Count;
+        int qtyLeftToAdd = qty;
 
-        Debug.Log("testInventory 1 : " + itemsInInventory.Contains(itemToAdd));
-
-        if (ItemsInInventory.Contains(itemToAdd))
+        // if we have occurences not at full stacks, add items to it
+        foreach (Item item in allItemsOccurences)
         {
-            Debug.Log("Item IS present");
-
-            List<Item> allItemsOccurences = itemsInInventory.FindAll(item => item.Id == itemToAdd.Id);
-            int nbOfOccurences = allItemsOccurences.Count;
-            foreach (Item item in allItemsOccurences)
+            if (!item.isStackFull() && nbOfOccurences > 0)
             {
-                Debug.Log("herehere");
-                if (!item.isStackFull() && nbOfOccurences > 0)
+                if (qtyLeftToAdd + item.Qty < item.MaxStackSize)
                 {
-                    createNewStacksOfItemAndAddQty(item, qty);
-                    Debug.Log("HERE");
+                    item.Qty += qtyLeftToAdd;
+                    qtyLeftToAdd = 0;
+                    break;
                 }
-                nbOfOccurences--;
-                
-
-                //if ((item.Qty + qtyToObtain) < item.MaxStackSize)
-                //{
-                //    itemToSearch.Qty += qtyToObtain;
-                //    break;
-                //}
-                //// items we wanna add are greater than the stack size allowed for that item
-                //else
-                //{
-                //    if (item.Qty < item.MaxStackSize)
-                //    {
-                //        int qtyAvailableToDistribute = item.MaxStackSize - item.Qty;
-                //        qtyToObtain -= qtyAvailableToDistribute;
-                //        item.Qty += qtyAvailableToDistribute;
-                //        nbOfOccurences--;
-
-                //        if (nbOfOccurences < 1 && qtyToObtain > 0)
-                //        {
-                //            for (int i = 0; i < Mathf.Ceil((qtyToObtain / item.MaxStackSize)); i++)
-                //            {
-                //                Item newItem = new Item(itemToSearch.Id, itemToSearch.ItemName, itemToSearch.Description, itemToSearch.MaxStackSize);
-                //                qtyAvailableToDistribute = newItem.MaxStackSize - newItem.Qty;
-                //                qtyToObtain -= qtyAvailableToDistribute;
-                //                newItem.Qty = qtyAvailableToDistribute;
-                //            }
-                //            break;
-                //        }
-
-                //        //Debug.Log("stack was cerated");
-                //    }
-                //    else
-                //    {
-                //        if (nbOfOccurences == 1 && item.isStackFull())
-                //        {
-                //            Item newItem = new Item(itemToSearch.Id, itemToSearch.ItemName, itemToSearch.Description, itemToSearch.MaxStackSize);
-                //            newItem.Qty = qtyToObtain;
-                //            ItemsInInventory.Add(newItem);
-                //            break;
-                //        }
-                //    }
-                //}
-                //nbOfOccurences--;
+                // put current stack at max stack
+                else
+                {
+                    qtyLeftToAdd -= item.MaxStackSize - item.Qty;
+                    item.Qty = item.MaxStackSize;
+                }
             }
+            nbOfOccurences--;
         }
-        else
+
+        // all occurences were at full stack and we still have items to add, we create new stacks
+        while (qtyLeftToAdd > 0)
         {
-            Debug.Log("Item IS NOT present");
+            Item newItem = new Item(itemToAdd.Id, itemToAdd.ItemName, itemToAdd.Description, itemToAdd.MaxStackSize);
 
-            createNewStacksOfItemAndAddQty(itemToAdd, qty);
-        }
-    }
-
-
-    // add "qty" items to inventory, create new stacks of item if qty>maxStackSize of item
-    private void createNewStacksOfItemAndAddQty (Item item, int qty)
-    {
-        int qtyLeftToDistribute = qty;
-        while (qtyLeftToDistribute > 0)
-        {
-            Item newItem = new Item(item.Id, item.ItemName, item.Description, item.MaxStackSize);
-            if (qtyLeftToDistribute < newItem.MaxStackSize)
+            if (qtyLeftToAdd < newItem.MaxStackSize)
             {
-                newItem.Qty = qtyLeftToDistribute;
-                ItemsInInventory.Add(newItem);
-                qtyLeftToDistribute = 0;
+                newItem.Qty = qtyLeftToAdd;
+                qtyLeftToAdd = 0;
             }
             else
             {
+                qtyLeftToAdd -= newItem.MaxStackSize - newItem.Qty;
                 newItem.Qty = newItem.MaxStackSize;
-                ItemsInInventory.Add(newItem);
-                qtyLeftToDistribute -= newItem.MaxStackSize;
             }
+            ItemsInInventory.Add(newItem);
         }
     }
-
-
 
 
     public void removeItem (Item item, int qty)
@@ -160,7 +104,5 @@ public class InventoryManager : MonoBehaviour
             itemsInInventory = value;
         }
     }
-
-
-
 }
+
