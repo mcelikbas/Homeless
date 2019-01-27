@@ -99,8 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6243afb82ba7f41ac8d26e8d114b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteTop: {fileID: 21300000, guid: 520040a90560eba4187732aca80a677e, type: 3}
+  spriteTop: {fileID: 21300004, guid: 9a01942c652986b408597cc3cac0bfc1, type: 3}
   spriteRight: {fileID: 21300000, guid: 9a01942c652986b408597cc3cac0bfc1, type: 3}
+  spriteDown: {fileID: 21300002, guid: 9a01942c652986b408597cc3cac0bfc1, type: 3}
 --- !u!212 &212877934143155818
 SpriteRenderer:
   m_ObjectHideFlags: 1

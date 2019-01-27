@@ -3,6 +3,8 @@ guid: 9a01942c652986b408597cc3cac0bfc1
 TextureImporter:
   fileIDToRecycleName:
     21300000: player_face_right
+    21300002: player_face_down
+    21300004: player_face_up
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -126,13 +128,53 @@ TextureImporter:
         width: 237
         height: 530
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 45ebc628b55d7b8448c27c75d30611ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_face_down
+      rect:
+        serializedVersion: 2
+        x: 3041
+        y: 1498
+        width: 230
+        height: 531
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e13a5fc38fdea4e940bf854163bb7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_face_up
+      rect:
+        serializedVersion: 2
+        x: 3309
+        y: 1498
+        width: 230
+        height: 531
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec83a39e32a131b4eaa57e83378f2078
       vertices: []
       indices: 
       edges: []

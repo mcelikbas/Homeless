@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public Sprite spriteTop;
     public Sprite spriteRight;
+    public Sprite spriteDown;
     private SpriteRenderer spriteRenderer;
 
 
@@ -70,12 +71,12 @@ public class PlayerMovement : MonoBehaviour {
         if(lastInput.y == 1)
         {
             spriteRenderer.sprite = spriteTop;
-            spriteRenderer.flipY = false;
+            //spriteRenderer.flipY = false;
         }
         else if (lastInput.y == -1)
         {
-            spriteRenderer.sprite = spriteTop;
-            spriteRenderer.flipY = true;
+            spriteRenderer.sprite = spriteDown;
+            //spriteRenderer.flipY = true;
         }
         
         if (lastInput.x == 1)
