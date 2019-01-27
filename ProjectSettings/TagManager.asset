@@ -8,6 +8,7 @@ TagManager:
   - Item
   - Wall
   - INV_MANAGER
+  - ESC_MENU
   layers:
   - Default
   - TransparentFX

@@ -21,14 +21,20 @@ public class PlayerMovement : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
 
 
+    private GameObject INV_MENU;
+    private bool escMenu = false;
     private GameObject INV_MANAGER;
     private bool craftMenu = false;
     private ItemDatabase itemDatabase;
     private Inventory inventory;
 
 
+
     private void Start ()
     {
+        INV_MENU = GameObject.FindGameObjectWithTag("ESC_MENU");
+        INV_MENU.SetActive(false);
+
         INV_MANAGER = GameObject.FindGameObjectWithTag("INV_MANAGER");
         INV_MANAGER.transform.GetChild(1).gameObject.SetActive(false);
 
@@ -55,6 +61,19 @@ public class PlayerMovement : MonoBehaviour {
                 INV_MANAGER.transform.GetChild(1).gameObject.SetActive(false);
             }
             craftMenu = !craftMenu;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            escMenu = !escMenu;
+            if (escMenu)
+            {
+                INV_MENU.SetActive(true);
+            }
+            else
+            {
+                INV_MENU.SetActive(false);
+            }
         }
     }
 
