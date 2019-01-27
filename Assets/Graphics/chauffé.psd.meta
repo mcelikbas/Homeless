@@ -9,6 +9,8 @@ TextureImporter:
     21300008: stone
     21300010: stick
     21300012: Firetorch_0
+    21300014: "chauff\xE9_0"
+    21300016: fibers_0
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -252,13 +254,53 @@ TextureImporter:
         width: 189
         height: 760
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 4fc5b7ab1ee722c438ada41eb02baf91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "chauff\xE9_0"
+      rect:
+        serializedVersion: 2
+        x: 2344
+        y: 30
+        width: 735
+        height: 479
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2fdceaa550ddb74eadf719afb06c370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fibers_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 139
+        width: 506
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a29993b53950db14d8b31b93dfe54074
       vertices: []
       indices: 
       edges: []

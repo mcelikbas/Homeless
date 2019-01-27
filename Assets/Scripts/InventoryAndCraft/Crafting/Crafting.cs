@@ -7,13 +7,16 @@ public class Crafting : MonoBehaviour {
 
     public ItemDatabase database;
     public Inventory inventory;
+    //public Text craftText;
 
     public GameObject craftingPanel;
     public GameObject craftingSlot;
 
     void Start()
     {
+
         GenerateSlots();
+        craftText.text = "";
     }
 
     void GenerateSlots()
@@ -40,7 +43,8 @@ public class Crafting : MonoBehaviour {
             }
             else
             {
-               //TODO UI can't craf item no enough ressources
+                //craftText.text = "No enough ressources for craft this item";
+                //TODO UI can't craft item no enough ressources
             }
         }
         else
