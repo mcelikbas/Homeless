@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour {
 
     private Vector2 lastInput = new Vector2(0,1);
 
+    public Vector2 Xbounds;
+    public Vector2 Ybounds;
+
     public Sprite spriteTop;
     public Sprite spriteRight;
     public Sprite spriteDown;
@@ -63,8 +66,32 @@ public class PlayerMovement : MonoBehaviour {
 
         lastInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
+        checkBoundary();
+
         transform.Translate(inputX, inputY, 0);
     }
+
+
+    private void checkBoundary ()
+    {
+        if (transform.position.x > Xbounds.y)
+        {
+            transform.position = new Vector3(Xbounds.y, transform.position.y, 0);
+        }
+        if (transform.position.x < Xbounds.x)
+        {
+            transform.position = new Vector3(Xbounds.x, transform.position.y, 0);
+        }
+        if (transform.position.y > Ybounds.y)
+        {
+            transform.position = new Vector3(transform.position.x, Ybounds.y, 0);
+        }
+        if (transform.position.y < Ybounds.x)
+        {
+            transform.position = new Vector3(transform.position.x, Ybounds.x, 0);
+        }
+    }
+
 
     private void updateSprite ()
     {
