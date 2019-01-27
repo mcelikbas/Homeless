@@ -28,10 +28,7 @@ public class CraftingSlot : MonoBehaviour, IPointerClickHandler {
         craftingScript.craftItem(myItem);
     }
 
-    // public void OnPointerClick(PointerEventData eventData)
-    // { 
-    //     craftingScript.craftItem(myItem);
-    // }
+    
 
 
 }

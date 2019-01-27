@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 
-public class Slot : MonoBehaviour {
+public class Slot : MonoBehaviour, IPointerClickHandler
+{
 
     Image myImage;
     Text myText;
@@ -64,4 +66,8 @@ public class Slot : MonoBehaviour {
         }
     }
 
+    void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
+    {
+        removeItem(myAmount);
+    }
 }

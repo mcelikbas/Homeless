@@ -44,9 +44,15 @@ public class Inventory : MonoBehaviour {
 
     public void removeItem(Item itemToRemove, int amount)
     {
-        
+        for (int i = 0; i < slots.Count; i++)
+        {
+            Slot currentSlot = slots[i].GetComponent<Slot>();
+            if (currentSlot.myItem == itemToRemove)
+            {
+                currentSlot.removeItem(amount);
+            }
+        }
     }
-
 
     //---------------------------------------------------------Crafting helpers ------------------------------------------------------
 
@@ -54,6 +60,22 @@ public class Inventory : MonoBehaviour {
     {
         return true;
     }
+
+    public bool hasInInventory(string lookupItem, int amount)
+    {
+        for (int i = 0; i < slots.Count; i++)
+        {
+            if (slots[i].GetComponent<Slot>().myItem != null)
+            {
+                if (slots[i].GetComponent<Slot>().myItem.itemName == lookupItem && slots[i].GetComponent<Slot>().myAmount >=amount)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
 
 
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Firecamp
   m_EditorClassIdentifier: 
   itemName: FireCamp
-  itemIcon: {fileID: 21300004, guid: 632cb137e0c6a294bb9ad16d8206852e, type: 3}
+  itemIcon: {fileID: 21300000, guid: 9a01942c652986b408597cc3cac0bfc1, type: 3}
   isStackable: 0
   maxStackAmount: 0
   isCraftable: 1
@@ -20,3 +20,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 638e90873fae1174ca201e2424e8acc0, type: 2}
   - {fileID: 11400000, guid: 73e3e8ccd1a823a46b2b3cbcc03b07df, type: 2}
   craftAmount: 0200000005000000
+  craftHowMany: 1

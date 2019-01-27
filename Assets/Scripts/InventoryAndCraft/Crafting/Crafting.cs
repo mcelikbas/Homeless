@@ -32,22 +32,54 @@ public class Crafting : MonoBehaviour {
 
     public void craftItem(Item itemToCraft)
     {
-        print(itemToCraft.itemName);
+        if (itemToCraft.isCraftable)
+        {
+            if (canCraft(itemToCraft))
+            {
+                add(itemToCraft);
+            }
+            else
+            {
+                print("can't craft that item");
+            }
+        }
+        else
+        {
+            return ;
+        }
     }
 
     bool canCraft(Item itemChecked)
     {
+        for(int i = 0; i < itemChecked.craftItems.Count; i++)
+        {
+            Item currentItem = itemChecked.craftItems[i];
+            int currentAmount = itemChecked.craftAmount[i];
+
+            if (!inventory.hasInInventory(currentItem.itemName, currentAmount))
+            {
+                return false;
+            }
+            
+        }
         return true;
     }
 
     void add(Item itemToAdd)
     {
-
+        //print(" added " + itemToAdd.itemName + "  to the inventory");
+        inventory.addItem(itemToAdd, itemToAdd.craftHowMany);
+        remove(itemToAdd);
     }
 
     void remove(Item itemToRemove)
     {
-
+        for (int i = 0; i < itemToRemove.craftItems.Count; i++)
+        {
+            Item currentItem = itemToRemove.craftItems[i];
+            int currentAmount = itemToRemove.craftAmount[i];
+            inventory.removeItem(currentItem, currentAmount);
+        }
     }
 
 }
