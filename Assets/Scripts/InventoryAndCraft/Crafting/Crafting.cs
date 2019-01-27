@@ -40,7 +40,7 @@ public class Crafting : MonoBehaviour {
             }
             else
             {
-                print("can't craft that item");
+               //TODO UI can't craf item no enough ressources
             }
         }
         else
@@ -67,7 +67,7 @@ public class Crafting : MonoBehaviour {
 
     void add(Item itemToAdd)
     {
-        //print(" added " + itemToAdd.itemName + "  to the inventory");
+        //TODO UI craft item added to inventory
         inventory.addItem(itemToAdd, itemToAdd.craftHowMany);
         remove(itemToAdd);
     }

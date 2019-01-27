@@ -35,7 +35,8 @@ public class Inventory : MonoBehaviour {
         }
         else
         {
-            print("inventory is full");
+            //TODO UI Inventory full 
+
             return false;
         }
     }
