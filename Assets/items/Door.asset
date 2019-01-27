@@ -9,15 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16cb752bd4fd3244383d36018c408eaf, type: 3}
-  m_Name: Firecamp
+  m_Name: Door
   m_EditorClassIdentifier: 
-  itemName: FireCamp
-  itemIcon: {fileID: 21300000, guid: 9a01942c652986b408597cc3cac0bfc1, type: 3}
+  itemName: Door
+  itemIcon: {fileID: 21300004, guid: 7ff405fde6ca5674fa1e65fc1e411118, type: 3}
   isStackable: 1
-  maxStackAmount: 10
+  maxStackAmount: 2
   isCraftable: 1
   craftItems:
-  - {fileID: 11400000, guid: 638e90873fae1174ca201e2424e8acc0, type: 2}
+  - {fileID: 11400000, guid: 0985466b80499b346ac7ae003018297b, type: 2}
   - {fileID: 11400000, guid: 73e3e8ccd1a823a46b2b3cbcc03b07df, type: 2}
   craftAmount: 0200000005000000
   craftHowMany: 1

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: Bed
   m_EditorClassIdentifier: 
   itemName: Bed
-  itemIcon: {fileID: 21300078, guid: c304dfe27841f6b41a8988b6892a6c93, type: 3}
-  isStackable: 0
-  maxStackAmount: 0
+  itemIcon: {fileID: 21300002, guid: 7ff405fde6ca5674fa1e65fc1e411118, type: 3}
+  isStackable: 1
+  maxStackAmount: 2
   isCraftable: 1
   craftItems:
   - {fileID: 11400000, guid: 638e90873fae1174ca201e2424e8acc0, type: 2}

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: WaterBottle
   itemIcon: {fileID: 21300058, guid: c304dfe27841f6b41a8988b6892a6c93, type: 3}
-  isStackable: 0
-  maxStackAmount: 1
+  isStackable: 1
+  maxStackAmount: 20
   isCraftable: 0
   craftItems: []
   craftAmount: 
+  craftHowMany: 0

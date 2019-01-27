@@ -10,15 +10,15 @@ public class Quickadd : MonoBehaviour {
 	void Update () {
 
         
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            inventory.addItem(database.getItemById(1), 10);
-        }
+        //if (Input.GetKeyDown(KeyCode.A))
+        //{
+        //    inventory.addItem(database.getItemById(1), 10);
+        //}
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            inventory.addItem(database.getItemById(0), 10);
-        }
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    inventory.addItem(database.getItemById(0), 10);
+        //}
 
     }
 }

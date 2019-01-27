@@ -14,7 +14,7 @@ MonoBehaviour:
   itemName: Stone
   itemIcon: {fileID: 21300008, guid: 9a01942c652986b408597cc3cac0bfc1, type: 3}
   isStackable: 1
-  maxStackAmount: 15
+  maxStackAmount: 100
   isCraftable: 0
   craftItems: []
   craftAmount: 

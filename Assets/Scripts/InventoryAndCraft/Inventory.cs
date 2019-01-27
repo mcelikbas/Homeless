@@ -73,11 +73,27 @@ public class Inventory : MonoBehaviour {
                 else
                 {
                     currentSlot.removeItem(currentSlot.myItem.maxStackAmount);
+
                     amountLeftToRemove -= currentSlot.myItem.maxStackAmount;
                 }
             }
         }
     }
+
+    public int countItem(Item itemToCount)
+    {
+        int counter = 0;
+        for (int i = 0; i < slots.Count; i++)
+        {
+            Slot currentSlot = slots[i].GetComponent<Slot>();
+            if (currentSlot.myItem == itemToCount)
+            {
+                counter += currentSlot.myAmount;
+            }
+        }
+        return counter;
+    }
+
 
     //public void removeItem(Item itemToRemove, int amount)
     //{

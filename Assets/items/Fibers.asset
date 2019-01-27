@@ -14,7 +14,7 @@ MonoBehaviour:
   itemName: Fibers
   itemIcon: {fileID: 21300004, guid: 632cb137e0c6a294bb9ad16d8206852e, type: 3}
   isStackable: 1
-  maxStackAmount: 20
+  maxStackAmount: 100
   isCraftable: 0
   craftItems: []
   craftAmount: 

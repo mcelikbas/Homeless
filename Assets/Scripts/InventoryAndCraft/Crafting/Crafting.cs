@@ -55,7 +55,7 @@ public class Crafting : MonoBehaviour {
         {
             Item currentItem = itemChecked.craftItems[i];
             int currentAmount = itemChecked.craftAmount[i];
-
+            //int myTotalAmount = inventory.countItem(itemChecked);
             if (!inventory.hasInInventory(currentItem.itemName, currentAmount))
             {
                 return false;
@@ -81,5 +81,7 @@ public class Crafting : MonoBehaviour {
             inventory.removeItem(currentItem, currentAmount);
         }
     }
+
+    
 
 }
