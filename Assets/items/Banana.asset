@@ -9,13 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16cb752bd4fd3244383d36018c408eaf, type: 3}
-  m_Name: Stone
+  m_Name: Banana
   m_EditorClassIdentifier: 
-  itemName: Stone
-  itemIcon: {fileID: 21300008, guid: 9a01942c652986b408597cc3cac0bfc1, type: 3}
+  itemName: 
+  itemIcon: {fileID: 21300082, guid: c304dfe27841f6b41a8988b6892a6c93, type: 3}
   isStackable: 1
-  maxStackAmount: 15
+  maxStackAmount: 5
   isCraftable: 0
   craftItems: []
   craftAmount: 
-  craftHowMany: 0

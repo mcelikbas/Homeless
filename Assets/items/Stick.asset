@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: Stick
   m_EditorClassIdentifier: 
   itemName: Stick
-  itemIcon: {fileID: 21300000, guid: 632cb137e0c6a294bb9ad16d8206852e, type: 3}
+  itemIcon: {fileID: 21300010, guid: 9a01942c652986b408597cc3cac0bfc1, type: 3}
   isStackable: 1
-  maxStackAmount: 1
+  maxStackAmount: 30
   isCraftable: 0
   craftItems: []
   craftAmount: 
+  craftHowMany: 0

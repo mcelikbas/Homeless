@@ -9,7 +9,6 @@ public class ItemDatabase : MonoBehaviour {
     public Item getItemById(int id)
     {
         Item itemToReturn = dataBaseItems[id];
-        Debug.Log("getitemid : " + itemToReturn);
         return itemToReturn;
     }
 }

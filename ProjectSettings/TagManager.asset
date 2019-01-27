@@ -7,6 +7,7 @@ TagManager:
   - GameManager
   - Item
   - Wall
+  - INV_MANAGER
   layers:
   - Default
   - TransparentFX
