@@ -14,6 +14,8 @@ TextureImporter:
     21300018: player_face_up_2
     21300020: player_face_down_1
     21300022: player_face_down_2
+    21300014: "chauff\xE9_0"
+    21300016: fibers_0
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -336,6 +338,13 @@ TextureImporter:
         y: 2033
         width: 226
         height: 520
+      name: "chauff\xE9_0"
+      rect:
+        serializedVersion: 2
+        x: 2344
+        y: 30
+        width: 735
+        height: 479
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -356,6 +365,13 @@ TextureImporter:
         y: 1496
         width: 226
         height: 523
+      name: fibers_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 139
+        width: 506
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

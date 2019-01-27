@@ -8,11 +8,7 @@ public class Inventory : MonoBehaviour {
     public ItemDatabase database;
 	
 	void Update () {
-        if (Input.GetButtonDown("Jump"))
-        {
-            Item item = database.getItemById(0);
-           // showList();
-        }
+    
 	}
 
     private void showList()

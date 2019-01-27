@@ -198,6 +198,8 @@ public class PlayerMovement : MonoBehaviour
             ItemToPick itemToPick = other.GetComponent<ItemToPick>();
 
             pickUpItem(itemToPick.id, itemToPick.qty);
+
+            Destroy(other.gameObject);
         }
     }
 
