@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16cb752bd4fd3244383d36018c408eaf, type: 3}
-  m_Name: Stone
+  m_Name: Fibers
   m_EditorClassIdentifier: 
-  itemName: Stone
-  itemIcon: {fileID: 21300008, guid: 9a01942c652986b408597cc3cac0bfc1, type: 3}
+  itemName: Fibers
+  itemIcon: {fileID: 21300004, guid: 632cb137e0c6a294bb9ad16d8206852e, type: 3}
   isStackable: 1
-  maxStackAmount: 15
+  maxStackAmount: 20
   isCraftable: 0
   craftItems: []
   craftAmount: 

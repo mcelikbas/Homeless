@@ -48,6 +48,7 @@ public class Inventory : MonoBehaviour {
         for (int i = 0; i < slots.Count; i++)
         {
             Slot currentSlot = slots[i].GetComponent<Slot>();
+            Debug.Log(currentSlot);
             if (currentSlot.myItem == itemToRemove)
             {
                 currentSlot.removeItem(amount);

@@ -12,12 +12,12 @@ public class Quickadd : MonoBehaviour {
         
         if (Input.GetKeyDown(KeyCode.A))
         {
-            inventory.addItem(database.getItemById(0), 1);
+            inventory.addItem(database.getItemById(1), 10);
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            inventory.addItem(database.getItemById(1), 1);
+            inventory.addItem(database.getItemById(0), 10);
         }
 
     }
