@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
 
     private float speed = 5.0f;
-    private float rotateSpeed ;
+    private float rotateSpeed;
     private float inputX;
     private float inputY;
 
-    private Vector2 lastInput = new Vector2(0,1);
+    private Vector2 lastInput = new Vector2(0, 1);
 
     public Vector2 Xbounds;
     public Vector2 Ybounds;
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour {
     public Sprite spriteTop;
     public Sprite spriteRight;
     public Sprite spriteDown;
+    private Sprite lastSprite;
     private SpriteRenderer spriteRenderer;
 
 
@@ -28,6 +30,8 @@ public class PlayerMovement : MonoBehaviour {
     private ItemDatabase itemDatabase;
     private Inventory inventory;
 
+
+    private Animator anim;
 
 
     private void Start ()
@@ -42,6 +46,8 @@ public class PlayerMovement : MonoBehaviour {
         inventory = GameObject.Find("INV_CRAFT").GetComponent<Inventory>();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        anim = GetComponent<Animator>();
     }
 
     void Update ()
@@ -114,28 +120,70 @@ public class PlayerMovement : MonoBehaviour {
 
     private void updateSprite ()
     {
-        if(lastInput.y == 1)
+        //if (lastInput == Vector2.zero)
+        //{
+        //    anim.SetBool("isWalkingRight", false);
+        //    anim.SetBool("isWalkingTop", false);
+        //    anim.SetBool("isWalkingDown", false);
+        //    spriteRenderer.sprite = lastSprite;
+        //}
+
+
+        // top
+        if (lastInput.y == 1)
         {
+            anim.SetBool("isWalkingTop", true);
             spriteRenderer.sprite = spriteTop;
         }
-        else if (lastInput.y == -1)
+        if (lastInput.y == 0)
         {
-            spriteRenderer.sprite = spriteDown;
+            anim.SetBool("isWalkingTop", false);
+            spriteRenderer.sprite = spriteTop;
         }
         
+        // down
+        if (lastInput.y == -1)
+        {
+            anim.SetBool("isWalkingDown", true);
+            spriteRenderer.sprite = spriteDown;
+        }
+        if (lastInput.y == 0)
+        {
+            anim.SetBool("isWalkingDown", false);
+            spriteRenderer.sprite = spriteDown;
+        }
+
+        // right
         if (lastInput.x == 1)
         {
+            anim.SetBool("isWalkingRight", true);
             spriteRenderer.sprite = spriteRight;
             spriteRenderer.flipY = false;
             spriteRenderer.flipX = false;
         }
-        else if (lastInput.x == -1)
+        if (lastInput.x == 0)
         {
+            anim.SetBool("isWalkingRight", false);
+            spriteRenderer.sprite = spriteRight;
+            spriteRenderer.flipY = false;
+            spriteRenderer.flipX = false;
+        }
+
+        // left
+        if (lastInput.x == -1)
+        {
+            anim.SetBool("isWalkingRight", true);
             spriteRenderer.sprite = spriteRight;
             spriteRenderer.flipY = false;
             spriteRenderer.flipX = true;
         }
-
+        if (lastInput.x == 0)
+        {
+            anim.SetBool("isWalkingRight", false);
+            spriteRenderer.sprite = spriteRight;
+            spriteRenderer.flipY = false;
+            spriteRenderer.flipX = true;
+        }
     }
 
     private void pickUpItem (int itemId, int qty)
