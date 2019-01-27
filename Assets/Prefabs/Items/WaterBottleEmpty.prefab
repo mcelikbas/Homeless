@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4135050497780424}
   - component: {fileID: 212631963056943040}
   m_Layer: 0
-  m_Name: item_gatherable_bouteille_vide
+  m_Name: WaterBottleEmpty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

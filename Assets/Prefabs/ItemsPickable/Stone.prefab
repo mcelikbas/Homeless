@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61997356245641424}
   - component: {fileID: 114709638654181312}
   m_Layer: 0
-  m_Name: stone
+  m_Name: Stone
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

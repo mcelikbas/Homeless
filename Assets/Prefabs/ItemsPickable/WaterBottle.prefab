@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61828359460492706}
   - component: {fileID: 114696402418498418}
   m_Layer: 0
-  m_Name: item_gatherable_bouteille_remplie
+  m_Name: WaterBottle
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

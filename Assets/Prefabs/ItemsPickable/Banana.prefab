@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61826333519706008}
   - component: {fileID: 114490825484727938}
   m_Layer: 0
-  m_Name: "r\xE9gime bananes mur"
+  m_Name: Banana
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
