@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour {
 
 
     private GameObject INV_MANAGER;
-    private bool inventoryIsHidden = true;
+    private bool craftMenu = false;
     private ItemDatabase itemDatabase;
     private Inventory inventory;
 
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour {
     private void Start ()
     {
         INV_MANAGER = GameObject.FindGameObjectWithTag("INV_MANAGER");
-        INV_MANAGER.transform.GetChild(0).gameObject.SetActive(false);
+        INV_MANAGER.transform.GetChild(1).gameObject.SetActive(false);
 
         itemDatabase = GameObject.Find("INV_CRAFT").GetComponent<ItemDatabase>();
         inventory = GameObject.Find("INV_CRAFT").GetComponent<Inventory>();
@@ -43,15 +43,15 @@ public class PlayerMovement : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (inventoryIsHidden)
+            if (craftMenu)
             {
-                INV_MANAGER.transform.GetChild(0).gameObject.SetActive(true);
+                INV_MANAGER.transform.GetChild(1).gameObject.SetActive(true);
             }
             else
             {
-                INV_MANAGER.transform.GetChild(0).gameObject.SetActive(false);
+                INV_MANAGER.transform.GetChild(1).gameObject.SetActive(false);
             }
-            inventoryIsHidden = !inventoryIsHidden;
+            craftMenu = !craftMenu;
         }
     }
 
@@ -71,12 +71,10 @@ public class PlayerMovement : MonoBehaviour {
         if(lastInput.y == 1)
         {
             spriteRenderer.sprite = spriteTop;
-            //spriteRenderer.flipY = false;
         }
         else if (lastInput.y == -1)
         {
             spriteRenderer.sprite = spriteDown;
-            //spriteRenderer.flipY = true;
         }
         
         if (lastInput.x == 1)
@@ -105,7 +103,6 @@ public class PlayerMovement : MonoBehaviour {
         {
             ItemToPick itemToPick = other.GetComponent<ItemToPick>();
 
-            Debug.Log("player hit" + other.name);
             pickUpItem(itemToPick.id, itemToPick.qty);
         }
     }
