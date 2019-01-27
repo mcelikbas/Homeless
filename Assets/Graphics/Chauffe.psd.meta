@@ -522,7 +522,7 @@ TextureImporter:
       name: "sol psych\xE9 2"
       rect:
         serializedVersion: 2
-        x: 3956
+        x: 3961
         y: 1232
         width: 512
         height: 512
@@ -564,8 +564,8 @@ TextureImporter:
         serializedVersion: 2
         x: 3961
         y: 1784
-        width: 508
-        height: 488
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -802,9 +802,9 @@ TextureImporter:
       name: dalles jaunes
       rect:
         serializedVersion: 2
-        x: 4503
-        y: 1776
-        width: 510
+        x: 4502
+        y: 1773
+        width: 512
         height: 512
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
