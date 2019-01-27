@@ -105,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4066721411419352}
   m_Layer: 0
-  m_Name: Maison_Bambou_b
+  m_Name: maison_bambou_b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
