@@ -6,6 +6,8 @@ TextureImporter:
     21300002: player_face_down
     21300004: player_face_up
     21300006: player_face_right
+    21300008: stone
+    21300010: stick
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -189,13 +191,53 @@ TextureImporter:
         width: 235
         height: 530
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 8421f9173f7187f4d97b17d829846680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1648
+        width: 396
+        height: 446
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e1c957ac1e5a424f81271da0beb3068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stick
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 30
+        width: 296
+        height: 618
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dee22f72bf93eb4684f3648f74eff20
       vertices: []
       indices: 
       edges: []
