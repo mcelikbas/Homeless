@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -13,10 +14,24 @@ public class PlayerMovement : MonoBehaviour {
 
     public Sprite spriteTop;
     public Sprite spriteRight;
+    public Sprite spriteDown;
     private SpriteRenderer spriteRenderer;
+
+
+    private GameObject INV_MANAGER;
+    private bool inventoryIsHidden = true;
+    private ItemDatabase itemDatabase;
+    private Inventory inventory;
+
 
     private void Start ()
     {
+        INV_MANAGER = GameObject.FindGameObjectWithTag("INV_MANAGER");
+        INV_MANAGER.transform.GetChild(0).gameObject.SetActive(false);
+
+        itemDatabase = GameObject.Find("INV_CRAFT").GetComponent<ItemDatabase>();
+        inventory = GameObject.Find("INV_CRAFT").GetComponent<Inventory>();
+
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -25,6 +40,19 @@ public class PlayerMovement : MonoBehaviour {
         move();
         updateSprite();
         //mouseLook();
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (inventoryIsHidden)
+            {
+                INV_MANAGER.transform.GetChild(0).gameObject.SetActive(true);
+            }
+            else
+            {
+                INV_MANAGER.transform.GetChild(0).gameObject.SetActive(false);
+            }
+            inventoryIsHidden = !inventoryIsHidden;
+        }
     }
 
 
@@ -43,26 +71,45 @@ public class PlayerMovement : MonoBehaviour {
         if(lastInput.y == 1)
         {
             spriteRenderer.sprite = spriteTop;
-            spriteRenderer.flipY = false;
+            //spriteRenderer.flipY = false;
         }
         else if (lastInput.y == -1)
         {
-            spriteRenderer.sprite = spriteTop;
-            spriteRenderer.flipY = true;
+            spriteRenderer.sprite = spriteDown;
+            //spriteRenderer.flipY = true;
         }
         
         if (lastInput.x == 1)
         {
             spriteRenderer.sprite = spriteRight;
+            spriteRenderer.flipY = false;
             spriteRenderer.flipX = false;
         }
         else if (lastInput.x == -1)
         {
             spriteRenderer.sprite = spriteRight;
+            spriteRenderer.flipY = false;
             spriteRenderer.flipX = true;
         }
 
     }
+
+    private void pickUpItem (int itemId, int qty)
+    {
+        inventory.addItem(itemDatabase.getItemById(itemId), qty);
+    }
+
+    private void OnTriggerEnter2D (Collider2D other)
+    {
+        if (other.CompareTag("Item"))
+        {
+            ItemToPick itemToPick = other.GetComponent<ItemToPick>();
+
+            Debug.Log("player hit" + other.name);
+            pickUpItem(itemToPick.id, itemToPick.qty);
+        }
+    }
+
 
 
     private void mouseLook ()
