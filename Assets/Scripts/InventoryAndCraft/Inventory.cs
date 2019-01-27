@@ -5,11 +5,25 @@ using UnityEngine;
 public class Inventory : MonoBehaviour {
 
     public List<GameObject> slots = new List<GameObject>();
-	
+    public ItemDatabase database;
 	
 	void Update () {
-		
+        if (Input.GetButtonDown("Jump"))
+        {
+            Item item = database.getItemById(0);
+           // showList();
+        }
 	}
+
+    private void showList()
+    {
+        Item item = database.getItemById(0);
+        Debug.Log("All occurence : \n");
+        foreach (GameObject g in findAllOccurences(item))
+        {
+            Debug.Log(g.name);
+        }
+    }
 
     public bool addItem(Item itemToAdd, int amount)
     {
@@ -45,16 +59,56 @@ public class Inventory : MonoBehaviour {
 
     public void removeItem(Item itemToRemove, int amount)
     {
+        int amountLeftToRemove = amount;
         for (int i = 0; i < slots.Count; i++)
         {
             Slot currentSlot = slots[i].GetComponent<Slot>();
-            Debug.Log(currentSlot);
             if (currentSlot.myItem == itemToRemove)
             {
-                currentSlot.removeItem(amount);
+                if (amountLeftToRemove <= currentSlot.myAmount)
+                {
+                    currentSlot.removeItem(amountLeftToRemove);
+                    break;
+                }
+                else
+                {
+                    currentSlot.removeItem(currentSlot.myItem.maxStackAmount);
+                    amountLeftToRemove -= currentSlot.myItem.maxStackAmount;
+                }
             }
         }
     }
+
+    //public void removeItem(Item itemToRemove, int amount)
+    //{
+    //    List<GameObject> allItemsOccurences = findAllOccurences(itemToRemove);
+
+
+
+    //    for (int i = 0; i < slots.Count; i++)
+    //    {
+    //        Slot currentSlot = slots[i].GetComponent<Slot>();
+    //        if (currentSlot.myItem == itemToRemove)
+    //        {
+    //            currentSlot.removeItem(amount);
+    //        }
+    //    }
+    //}
+
+    public List<GameObject> findAllOccurences(Item itemToSearch)
+    {
+        List<GameObject> allItemsOccurences = new List<GameObject>();
+        for (int i = 0; i < slots.Count; i++)
+        {
+            Slot currentSlot = slots[i].GetComponent<Slot>();
+            if (currentSlot.myItem == itemToSearch)
+            {
+                allItemsOccurences.Add(slots[i]);
+            }
+        }
+        return allItemsOccurences;
+    }
+
 
     //---------------------------------------------------------Crafting helpers ------------------------------------------------------
 
